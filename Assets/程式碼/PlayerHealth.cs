@@ -84,4 +84,16 @@ public class PlayerHealth : MonoBehaviour
         Time.timeScale = 0f;
     }
 
+
+    public void DieByFalling()
+    {
+        if (isDead)
+            return;
+
+        currentHP = 0;
+        UpdateHP();
+        GameOver();
+    }
+
+
 }
